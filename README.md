@@ -1,6 +1,8 @@
 # IDA_StudentsProject1.exe-
 
-1)Вот наше задание 
+================================РЕШЕНИЕ1===================================
+
+1) Вот наше задание 
 
 <img width="490" height="276" alt="{3DDBA078-85A3-4EFA-9C7D-E94C6707F814}" src="https://github.com/user-attachments/assets/818cd6a3-60ec-4ea2-a620-d8e6d4235cf6" />
 
@@ -62,3 +64,24 @@ v18 и v20 это дефис -
 <img width="474" height="263" alt="{6C083D75-3CA8-4754-80E2-A67BC23C21D2}" src="https://github.com/user-attachments/assets/d7f29e6f-b60d-4339-b21a-21cc3581972e" />
 
 Наслаждаемся цветением сакуры
+
+=============================================РЕШЕНИЕ2==============================================
+
+Убираем все проверки на ввод
+
+cmp eax, ebx    ; вычисляет eax - ebx, флаги по результату ZF=1 если eax == ebx
+
+test a, b       ; вычисляет (a AND b), результат выбрасывает, ставит флаги ZF = 1 если a AND b == 0 (нет общих единичных битов)
+
+jz метка      ; Jump if Zero → прыгает, если ZF = 1
+
+jnz метка     ; Jump if Not Zero → прыгает, если ZF = 0
+
+заменяем с patch program patch the bytes все биты на 90... и получаем nop( это пустота )
+   Было: 0F 85 78 01 00 00
+   Стало: 90 90 90 90 90 90
+
+<img width="479" height="1103" alt="{F9705E92-CCC3-4B71-8F82-54A4CD623658}" src="https://github.com/user-attachments/assets/f021a8af-e254-43cf-87d7-1e453d5b2531" />
+
+
+<img width="652" height="1123" alt="{BEF8914C-2790-4D81-B519-42131BA18902}" src="https://github.com/user-attachments/assets/af94d3ab-6ffd-416b-9de7-486c060e0289" />
