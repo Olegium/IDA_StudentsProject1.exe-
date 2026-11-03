@@ -65,7 +65,7 @@ v18 и v20 это дефис -
 
 Наслаждаемся цветением сакуры
 
-=============================================РЕШЕНИЕ2==============================================
+========================РЕШЕНИЕ2=================================
 
 Убираем все проверки на ввод
 
@@ -78,10 +78,14 @@ jz метка      ; Jump if Zero → прыгает, если ZF = 1
 jnz метка     ; Jump if Not Zero → прыгает, если ZF = 0
 
 заменяем с patch program patch the bytes все биты на 90... и получаем nop( это пустота )
+
    Было: 0F 85 78 01 00 00
+   
    Стало: 90 90 90 90 90 90
 
 <img width="479" height="1103" alt="{F9705E92-CCC3-4B71-8F82-54A4CD623658}" src="https://github.com/user-attachments/assets/f021a8af-e254-43cf-87d7-1e453d5b2531" />
 
 
 <img width="652" height="1123" alt="{BEF8914C-2790-4D81-B519-42131BA18902}" src="https://github.com/user-attachments/assets/af94d3ab-6ffd-416b-9de7-486c060e0289" />
+
+<img width="512" height="271" alt="{4AF2CD82-C7F1-482D-BCAC-1ACF516F76F4}" src="https://github.com/user-attachments/assets/64e99308-7d9f-493f-bb07-071f21e94e3e" />
